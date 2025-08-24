@@ -1,0 +1,212 @@
+[
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/package-lock.json",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-4db43e19/tBqO.json",
+    "restored_to": "/home/rockbot/recovered_project/package-lock.json",
+    "timestamp": 1716902227990
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/Makefile",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-c5109b9/VYgh",
+    "restored_to": "/home/rockbot/recovered_project/Makefile",
+    "timestamp": 1716902973258
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/.env.example",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-62c1c448/swPi.example",
+    "restored_to": "/home/rockbot/recovered_project/.env.example",
+    "timestamp": 1723684146347
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/styles/Tooltip.module.css",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-66811b64/CQUC.css",
+    "restored_to": "/home/rockbot/recovered_project/styles/Tooltip.module.css",
+    "timestamp": 1723689395108
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/components/mdx.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/6b959bde/RIx4.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/components/mdx.tsx",
+    "timestamp": 1723691049446
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/test/page.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-de19b4/xahp.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/test/page.tsx",
+    "timestamp": 1723691208042
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/project_old/access.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/64158d58/6CoD.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/project_old/access.mdx",
+    "timestamp": 1745166079401
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/README.md",
+    "snapshot": "/home/rockbot/.config/Code/User/History/235ddfba/8ggB.md",
+    "restored_to": "/home/rockbot/recovered_project/README.md",
+    "timestamp": 1745181242338
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/contact/page.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-4a7cb88c/1BtR.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/contact/page.tsx",
+    "timestamp": 1745181434831
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/projects/[slug]/header.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-7de3cbda/6aHg.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/projects/[slug]/header.tsx",
+    "timestamp": 1745181546952
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/contentlayer.config.js",
+    "snapshot": "/home/rockbot/.config/Code/User/History/6051e87c/R4vc.js",
+    "restored_to": "/home/rockbot/recovered_project/contentlayer.config.js",
+    "timestamp": 1745182070961
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/AmazonUIClone.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-6a356aa/wIMB.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/AmazonUIClone.mdx",
+    "timestamp": 1745184794757
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/ChitraGuptaSIH.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-10031409/BSp5.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/ChitraGuptaSIH.mdx",
+    "timestamp": 1745184850485
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/GarageBook.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-3739c61b/ltN1.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/GarageBook.mdx",
+    "timestamp": 1745184956876
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/CarProbe.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/1aad41f1/P3yA.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/CarProbe.mdx",
+    "timestamp": 1745187484046
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/components/card.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/523b8089/CBIl.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/components/card.tsx",
+    "timestamp": 1745189348400
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/projects/filterForm.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-73b4634f/fWd1.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/projects/filterForm.tsx",
+    "timestamp": 1745189451723
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/projects/page.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/16b834e4/E69E.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/projects/page.tsx",
+    "timestamp": 1745189744327
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/package.json",
+    "snapshot": "/home/rockbot/.config/Code/User/History/5fcbc4cd/4qGL.json",
+    "restored_to": "/home/rockbot/recovered_project/package.json",
+    "timestamp": 1745191298987
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/global.css",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-1577584b/p21W.css",
+    "restored_to": "/home/rockbot/recovered_project/global.css",
+    "timestamp": 1745192023788
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/layout.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/7c57a5c0/VBcn.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/layout.tsx",
+    "timestamp": 1745195210721
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/.env",
+    "snapshot": "/home/rockbot/.config/Code/User/History/1f0f163c/h3vg",
+    "restored_to": "/home/rockbot/recovered_project/.env",
+    "timestamp": 1756045100018
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/tailwind.config.js",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-6b11b124/QWwb.js",
+    "restored_to": "/home/rockbot/recovered_project/tailwind.config.js",
+    "timestamp": 1756045321173
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/GaragePro.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/21a15d37/RiXu.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/GaragePro.mdx",
+    "timestamp": 1756047305829
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/IHeardARumerServer.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/76c7e3db/Ys9M.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/IHeardARumerServer.mdx",
+    "timestamp": 1756047654218
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/GuessTheLogo.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-b5343e6/Ex2W.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/GuessTheLogo.mdx",
+    "timestamp": 1756047671333
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/IHeardARumerApp.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/10865f4f/66MG.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/IHeardARumerApp.mdx",
+    "timestamp": 1756047735539
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/IHeardARumerWebsite.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/13ca1349/Y7az.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/IHeardARumerWebsite.mdx",
+    "timestamp": 1756047808972
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/Netcheques.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/1c75deea/0BVl.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/Netcheques.mdx",
+    "timestamp": 1756047873027
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/WhatsAppAutomation.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-4fc18f22/1CH0.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/WhatsAppAutomation.mdx",
+    "timestamp": 1756047914790
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/TopRatedMovies.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/1dd25887/U8MP.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/TopRatedMovies.mdx",
+    "timestamp": 1756048445594
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/IMXMedia.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-65e3e3db/r9zw.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/IMXMedia.mdx",
+    "timestamp": 1756048633890
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/content/projects/ExcelApp.mdx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-743ac161/UGzH.mdx",
+    "restored_to": "/home/rockbot/recovered_project/content/projects/ExcelApp.mdx",
+    "timestamp": 1756048902051
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/.gitignore",
+    "snapshot": "/home/rockbot/.config/Code/User/History/-8c101cd/AWKZ",
+    "restored_to": "/home/rockbot/recovered_project/.gitignore",
+    "timestamp": 1756049115957
+  },
+  {
+    "original": "/home/rockbot/Documents/jagritnokwal.com/app/page.tsx",
+    "snapshot": "/home/rockbot/.config/Code/User/History/2c9c0165/EQtx.tsx",
+    "restored_to": "/home/rockbot/recovered_project/app/page.tsx",
+    "timestamp": 1756050647589
+  }
+]

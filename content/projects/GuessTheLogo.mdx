@@ -1,0 +1,42 @@
+---
+title: Guess the Logo
+description: A server-controlled multiplayer logo guessing game built with Golang and gRPC, where users identify brands based on logos or names under time constraints.
+date: "2022-12-08"
+published: true
+repository: J-Nokwal/Guess_The_Logo_Server
+tags: [Go, Backend, Server, Real-time, gRPC, MySQL, GORM]
+---
+
+**Guess the Logo** is a real-time multiplayer quiz game developed using **Golang** and **gRPC** (HTTP/2 protocol). The game revolves around identifying brands from either their logos or names, offering an engaging and competitive experience.
+
+Players are presented with:
+
+- A **brand name** and must choose the correct **logo** out of four.
+- Or, a **logo** and must choose the correct **brand name** out of four.
+
+Game modes:
+- 🟢 Easy  
+- 🟡 Medium  
+- 🔴 Hard  
+Each level reduces the time available to select an answer, increasing difficulty.
+
+**Key features:**
+
+- Entirely **server-controlled**: client apps only render screens and handle basic navigation.
+- **gRPC protocol** for real-time communication.
+- Server sends commands like:  
+  → `show_scoreboard`  
+  → `next_question`  
+  → `end_game`  
+- All logic lives on the server; clients just follow instructions.
+- Scoreboard and user data saved in a **MySQL** database.
+- Logo dataset sourced from **Kaggle**.
+
+**Tools Used:**
+
+- ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+- ![gRPC](https://img.shields.io/badge/gRPC-0082FC?style=for-the-badge&logo=grpc&logoColor=white)
+- ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+- ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
+
+👉 [View Repository](https://github.com/J-Nokwal/Guess_The_Logo_Server)
