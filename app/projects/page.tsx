@@ -4,11 +4,13 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card, CardWithBackground } from "../components/card";
 import { Article } from "./article";
-import { Redis } from "@upstash/redis";
 import { Eye, Filter, X } from "lucide-react";
 import FilterForm from "./filterForm";
+import { createClient } from "redis";
+import { getRedisClient } from "@/app/components/redis";
 
-const redis = Redis.fromEnv();        
+// Get Redis client
+const redis: ReturnType<typeof createClient> = getRedisClient();
 
 export const revalidate = 60;
 
@@ -45,14 +47,14 @@ export default async function ProjectsPage({
   searchParams: { tags?: string | string[] };
 }) {
   // Get view counts
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":"))
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  const keys = allProjects.map((p) => ["pageviews", "projects", p.slug].join(":"));
+
+const rawViews = await redis.mGet(keys); // returns (string | null)[]
+
+const views = rawViews.reduce((acc, v, i) => {
+  acc[allProjects[i].slug] = v ? Number(v) : 0;
+  return acc;
+}, {} as Record<string, number>);
 
   // Process filter tags from search params
   const selectedTags =

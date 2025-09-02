@@ -4,8 +4,9 @@ import { Mdx } from "../../../app/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
-import { Redis } from "@upstash/redis";
 
+import { getRedisClient } from "@/app/components/redis";
+import { createClient } from "redis";
 export const revalidate = 60;
 
 type Props = {
@@ -14,7 +15,9 @@ type Props = {
   };
 };
 
-const redis = Redis.fromEnv();
+// Get Redis client
+const redis: ReturnType<typeof createClient> = getRedisClient();
+
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
   return allProjects
@@ -32,8 +35,9 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 
-  const views =
-    (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+  // Redis `get` always returns string | null
+  const rawViews = await redis.get(["pageviews", "projects", slug].join(":"));
+  const views = rawViews ? Number(rawViews) : 0;
 
   return (
     <div className="bg-zinc-50 min-h-screen">
