@@ -5,6 +5,9 @@ let redis: Redis | null = null;
 export function getRedisClient(): Redis {
 
   if (!redis) {
+    if (!process.env.REDIS_HOST || !process.env.REDIS_PORT) {
+      throw new Error("Missing Redis configuration in environment variables");
+    }
     redis = new Redis({
       host: process.env.REDIS_HOST,
       port: Number(process.env.REDIS_PORT),
