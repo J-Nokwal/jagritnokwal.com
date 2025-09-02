@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getRedisClient } from "@/app/components/redis";
-import { createClient } from "redis";
+import { getRedisClient } from "@/lib/redis";
+import Redis from "ioredis";
 
 // Get Redis client
-const redis: ReturnType<typeof createClient> = getRedisClient();
+const redis: Redis = getRedisClient();
 
 export const config = {
   runtime: "edge",
@@ -39,12 +39,11 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
     // deduplicate the ip for each slug
     const isNew = await redis.set(
       ["deduplicate", hash, slug].join(":"),
-      "true", // Redis stores strings, not booleans
-      {
-        NX: true, // only set if not exists
-        EX: 24 * 60 * 60, // expire in seconds
-      }
+      "true", // Redis only stores strings
+      "EX",
+      24 * 60 * 60 // expire in seconds
     );
+
     if (!isNew) {
       new NextResponse(null, { status: 202 });
     }

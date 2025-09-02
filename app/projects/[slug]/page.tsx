@@ -4,9 +4,9 @@ import { Mdx } from "../../../app/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
+import { getRedisClient } from "@/lib/redis";
+import Redis from "ioredis";
 
-import { getRedisClient } from "@/app/components/redis";
-import { createClient } from "redis";
 export const revalidate = 60;
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
 };
 
 // Get Redis client
-const redis: ReturnType<typeof createClient> = getRedisClient();
+const redis:Redis = getRedisClient();
 
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
