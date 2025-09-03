@@ -9,8 +9,7 @@ import FilterForm from "./filterForm";
 import { getRedisClient } from "@/lib/redis";
 import Redis from "ioredis";
 
-// Get Redis client
-const redis: Redis = getRedisClient();
+
 
 export const revalidate = 60;
 
@@ -46,6 +45,9 @@ export default async function ProjectsPage({
 }: {
   searchParams: { tags?: string | string[] };
 }) {
+  // Get Redis client
+const redis: Redis = getRedisClient();
+
   // Get view counts
   const keys = allProjects.map((p) => ["pageviews", "projects", p.slug].join(":"));
 

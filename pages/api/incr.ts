@@ -2,9 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { getRedisClient } from "@/lib/redis";
 import Redis from "ioredis";
 
-// Get Redis client
-const redis: Redis = getRedisClient();
-
 export const config = {
   runtime: "edge",
 };
@@ -26,6 +23,10 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
     return new NextResponse("Slug not found", { status: 400 });
   }
   const ip = req.ip;
+
+  // Get Redis client
+  const redis: Redis = getRedisClient();
+
   if (ip) {
     // Hash the IP in order to not store it directly in your db.
     const buf = await crypto.subtle.digest(

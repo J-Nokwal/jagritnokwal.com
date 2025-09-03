@@ -15,8 +15,6 @@ type Props = {
   };
 };
 
-// Get Redis client
-const redis:Redis = getRedisClient();
 
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
@@ -34,6 +32,8 @@ export default async function PostPage({ params }: Props) {
   if (!project) {
     notFound();
   }
+// Get Redis client
+const redis:Redis = getRedisClient();
 
   // Redis `get` always returns string | null
   const rawViews = await redis.get(["pageviews", "projects", slug].join(":"));
