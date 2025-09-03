@@ -2,10 +2,10 @@ import Redis from "ioredis";
 
 let redis: Redis | null = null;
 
-export function getRedisClient(): Redis {
+export function getRedisClient(): Redis|null {
   if (!redis) {
     if (!process.env.REDIS_HOST || !process.env.REDIS_PORT) {
-      throw new Error("Missing Redis configuration in environment variables");
+      return null;
     }
     redis = new Redis({
       host: process.env.REDIS_HOST,

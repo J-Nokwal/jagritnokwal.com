@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getRedisClient } from "@/lib/redis";
+import { getRedisClient } from "@/lib/redis.serve";
 import Redis from "ioredis";
 
 export const config = {
@@ -25,7 +25,7 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
   const ip = req.ip;
 
   // Get Redis client
-  const redis: Redis = getRedisClient();
+  const redis: Redis| null = getRedisClient();
 
   if (ip) {
     // Hash the IP in order to not store it directly in your db.
@@ -38,7 +38,7 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
       .join("");
 
     // deduplicate the ip for each slug
-    const isNew = await redis.set(
+    const isNew = await redis?.set(
       ["deduplicate", hash, slug].join(":"),
       "true", // Redis only stores strings
       "EX",
@@ -49,6 +49,6 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
       new NextResponse(null, { status: 202 });
     }
   }
-  await redis.incr(["pageviews", "projects", slug].join(":"));
+  await redis?.incr(["pageviews", "projects", slug].join(":"));
   return new NextResponse(null, { status: 202 });
 }

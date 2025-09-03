@@ -6,7 +6,7 @@ import { Card, CardWithBackground } from "../components/card";
 import { Article } from "./article";
 import { Eye, Filter, X } from "lucide-react";
 import FilterForm from "./filterForm";
-import { getRedisClient } from "@/lib/redis";
+import { getRedisClient } from "@/lib/redis.serve";
 import Redis from "ioredis";
 
 
@@ -46,12 +46,12 @@ export default async function ProjectsPage({
   searchParams: { tags?: string | string[] };
 }) {
   // Get Redis client
-const redis: Redis = getRedisClient();
+const redis: Redis| null = getRedisClient();
 
   // Get view counts
   const keys = allProjects.map((p) => ["pageviews", "projects", p.slug].join(":"));
 
-const rawViews = await redis.mget(keys); // returns (string | null)[]
+const rawViews = (await redis?.mget(keys))??[]; // returns (string | null)[]
 
 const views = rawViews.reduce((acc, v, i) => {
   acc[allProjects[i].slug] = v ? Number(v) : 0;

@@ -4,7 +4,7 @@ import { Mdx } from "../../../app/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
-import { getRedisClient } from "@/lib/redis";
+import { getRedisClient } from "@/lib/redis.serve";
 import Redis from "ioredis";
 
 export const revalidate = 60;
@@ -33,10 +33,10 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 // Get Redis client
-const redis:Redis = getRedisClient();
+const redis:Redis | null = getRedisClient();
 
   // Redis `get` always returns string | null
-  const rawViews = await redis.get(["pageviews", "projects", slug].join(":"));
+  const rawViews = await redis?.get(["pageviews", "projects", slug].join(":"));
   const views = rawViews ? Number(rawViews) : 0;
 
   return (
