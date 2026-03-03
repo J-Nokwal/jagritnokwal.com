@@ -19,18 +19,18 @@ interface FiltersProps {
 
 const Filters: React.FC<FiltersProps> = ({ availableTags, selectedTags }) => {
   return (
-    <div className="relative group z-10 isolate">
-      <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-200 bg-zinc-800 rounded-md hover:bg-zinc-700 w-full lg:w-auto">
+    <div className="group z-10 isolate relative">
+      <button className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-md w-full lg:w-auto font-medium text-zinc-200 text-sm">
         <Filter className="w-4 h-4" />
         Filter
         {selectedTags.length > 0 && (
-          <span className="flex items-center justify-center w-5 h-5 text-xs bg-zinc-600 rounded-full">
+          <span className="flex justify-center items-center bg-zinc-600 rounded-full w-5 h-5 text-xs">
             {selectedTags.length}
           </span>
         )}
       </button>
 
-      <div className="absolute left-0 right-auto lg:right-0 lg:left-auto  z-10 hidden pt-2  group-hover:block hover:block w-full lg:w-96">
+      <div className="hidden hover:block group-hover:block right-auto lg:right-0 left-0 lg:left-auto z-10 absolute pt-2 w-full lg:w-96">
         <Card>
           <FilterForm availableTags={availableTags} selectedTags={selectedTags} />
         </Card>
@@ -98,10 +98,10 @@ export default async function ProjectsPage({
   return (
     <div className="relative pb-16">
       <Navigation />
-      <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-        <div className="flex flex-col max-w-2xl mx-auto lg:max-w-full lg:flex-row lg:items-center lg:justify-between lg:mx-0">
+      <div className="space-y-8 md:space-y-16 mx-auto px-6 lg:px-8 pt-20 md:pt-24 lg:pt-32 max-w-7xl">
+        <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center mx-auto lg:mx-0 lg:max-w-full max-w-2xl">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+            <h2 className="font-bold text-zinc-100 text-3xl sm:text-4xl tracking-tight">
               Projects
             </h2>
             <p className="mt-4 text-zinc-400">
@@ -114,7 +114,7 @@ export default async function ProjectsPage({
           </div>
         </div>
 
-        <div className="w-full h-px bg-zinc-800" />
+        <div className="bg-zinc-800 w-full h-px" />
 
         {filteredProjects.length === 0 ? (
           <div className="py-12 text-center">
@@ -128,13 +128,13 @@ export default async function ProjectsPage({
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
+            <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mx-auto">
               {featured && (
                 <Card>
                   <Link href={`/projects/${featured.slug}`}>
-                    <article className="relative w-full h-full p-4 md:p-8">
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="text-xs text-zinc-100">
+                    <article className="relative p-4 md:p-8 w-full h-full">
+                      <div className="flex justify-between items-center gap-2">
+                        <div className="text-zinc-100 text-xs">
                           {featured.date ? (
                             <time
                               dateTime={new Date(featured.date).toISOString()}
@@ -147,7 +147,7 @@ export default async function ProjectsPage({
                             <span>SOON</span>
                           )}
                         </div>
-                        <span className="flex items-center gap-1 text-xs text-zinc-500">
+                        <span className="flex items-center gap-1 text-zinc-500 text-xs">
                           <Eye className="w-4 h-4" />{" "}
                           {Intl.NumberFormat("en-US", {
                             notation: "compact",
@@ -157,15 +157,15 @@ export default async function ProjectsPage({
 
                       <h2
                         id="featured-post"
-                        className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                        className="mt-4 font-display font-bold text-zinc-100 group-hover:text-white text-3xl sm:text-4xl"
                       >
                         {featured.title}
                       </h2>
-                      <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                      <p className="mt-4 text-zinc-400 group-hover:text-zinc-300 leading-8 duration-150">
                         {featured.description}
                       </p>
-                      <div className="absolute bottom-4 md:bottom-8">
-                        <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                      <div className="bottom-4 md:bottom-8 absolute">
+                        <p className="hidden lg:block text-zinc-200 hover:text-zinc-50">
                           Read more <span aria-hidden="true">&rarr;</span>
                         </p>
                       </div>
@@ -174,7 +174,7 @@ export default async function ProjectsPage({
                 </Card>
               )}
 
-              <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
+              <div className="flex flex-col gap-8 mx-auto lg:mx-0 border-gray-900/10 border-t lg:border-t-0 w-full">
                 {[top2, top3].filter(Boolean).map((project) => (
                   <Card key={project?.slug}>
                     <Article
@@ -186,10 +186,10 @@ export default async function ProjectsPage({
               </div>
             </div>
 
-            <div className="hidden w-full h-px md:block bg-zinc-800" />
+            <div className="hidden md:block bg-zinc-800 w-full h-px" />
 
-            <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-              <div className="grid grid-cols-1 gap-4">
+            <div className="gap-4 grid grid-cols-1 md:grid-cols-3 mx-auto lg:mx-0">
+              <div className="gap-4 grid grid-cols-1">
                 {sorted
                   .filter((_, i) => i % 3 === 0)
                   .map((project) => (
@@ -201,7 +201,7 @@ export default async function ProjectsPage({
                     </Card>
                   ))}
               </div>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="gap-4 grid grid-cols-1">
                 {sorted
                   .filter((_, i) => i % 3 === 1)
                   .map((project) => (
@@ -213,7 +213,7 @@ export default async function ProjectsPage({
                     </Card>
                   ))}
               </div>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="gap-4 grid grid-cols-1">
                 {sorted
                   .filter((_, i) => i % 3 === 2)
                   .map((project) => (

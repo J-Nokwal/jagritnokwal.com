@@ -7,7 +7,7 @@ export const config = {
 };
 
 export default async function incr(req: NextRequest): Promise<NextResponse> {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {p
     return new NextResponse("use POST", { status: 405 });
   }
   if (req.headers.get("Content-Type") !== "application/json") {

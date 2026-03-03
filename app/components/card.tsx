@@ -22,16 +22,16 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<div
 			onMouseMove={onMouseMove}
-			className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 "
+			className="group relative md:gap-8 hover:bg-zinc-800/10 border border-zinc-600 hover:border-zinc-400/50 rounded-xl overflow-hidden duration-700"
 		>
-			<div className="pointer-events-none isolate">
-				<div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
+			<div className="isolate pointer-events-none">
+				<div className="z-0 absolute inset-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
 				<motion.div
-					className="absolute inset-0 z-10  bg-gradient-to-br opacity-100  via-zinc-100/10  transition duration-1000 group-hover:opacity-50 "
+					className="z-10 absolute inset-0 bg-gradient-to-br via-zinc-100/10 opacity-100 group-hover:opacity-50 transition duration-1000"
 					style={style}
 				/>
 				<motion.div
-					className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
+					className="z-10 absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 mix-blend-overlay"
 					style={style}
 				/>
 			</div>
@@ -58,16 +58,16 @@ export const CardWithBackground: React.FC<PropsWithChildren> = ({ children }) =>
 	return (
 		<div
 			onMouseMove={onMouseMove}
-			className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 "
+			className="group relative md:gap-8 hover:bg-zinc-800/10 border border-zinc-600 hover:border-zinc-400/50 rounded-xl overflow-hidden duration-700"
 		>
-			<div className="pointer-events-none ">
-				<div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
+			<div className="pointer-events-none">
+				<div className="z-0 absolute inset-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
 				<motion.div
-					className="absolute inset-0 z-10  bg-gradient-to-br opacity-100  via-zinc-100/10  transition duration-1000 group-hover:opacity-50 "
+					className="z-10 absolute inset-0 bg-gradient-to-br via-zinc-100/10 opacity-100 group-hover:opacity-50 transition duration-1000"
 					style={style}
 				/>
 				<motion.div
-					className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
+					className="z-10 absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 mix-blend-overlay"
 					style={style}
 				/>
 			</div>
